@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= caminho === "Contato" ? caminho : "MadDevWorks " + caminho %></title>
+    <link href="/css/meuEstilo.css" rel="stylesheet">
+    
+</head>
+<body>
+<header>
+    <img class="logo" src="/images/M-removebg-preview.png" alt="logo">
+    <nav>
+        <ul>
+            <% pages.forEach(page => { %>
+                <li><a href="<%= page.caminho %>"><%= page.nome %></a></li>
+            <% }); %>
+        </ul>
+    </nav>
+</header>
