@@ -5,10 +5,14 @@
     
     <div class="projetos">
         <% projetos.forEach(projeto => { %>
-            <button class="openPopupBtn">
+            <button class="openPopupBtn" 
+                data-titulo="<%= projeto.titulo %>" 
+                data-descricao="<%= projeto.descricao %>" 
+                data-imagem="<%= projeto.imagem %>">
+                
                 <div class="projeto">
                     <img src="<%= projeto.imagem %>" alt="<%= projeto.titulo %>">
-                    <h3 ><%= projeto.titulo %></h3>
+                    <h3><%= projeto.titulo %></h3>
                     <p><%= projeto.descricao %></p>
                 </div>
             </button>

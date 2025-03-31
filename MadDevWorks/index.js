@@ -13,8 +13,6 @@ import portfolio from "./routes/portfolio.js";
 app.use("/portfolio", portfolio);
 import contatoRoutes from "./routes/contatoRoutes.js";
 app.use("/contato", contatoRoutes);
-import exemplosRoutes from "./routes/exemploRoutes.js";
-app.use("/sites", exemplosRoutes);
 app.listen(3000, (err) => {
     if (err)
     console.error(err);

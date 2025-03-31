@@ -1,23 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById("popup");
     const closePopupBtn = document.getElementById("closePopupBtn");
-
-    // Selecionar todos os botões de abrir o pop-up
     const openPopupBtns = document.querySelectorAll(".openPopupBtn");
-
-    // Adicionar o evento de clique para cada botão
+    const popupTitulo = document.querySelector(".popup-content h2");
+    const popupDescricao = document.createElement("p");
+    const popupImagem = document.createElement("img");
+    const popupContent = document.querySelector(".popup-content");
+    popupContent.appendChild(popupImagem);
+    popupContent.appendChild(popupDescricao);
     openPopupBtns.forEach(button => {
         button.onclick = function() {
+            const titulo = this.getAttribute("data-titulo");
+            const descricao = this.getAttribute("data-descricao");
+            const imagem = this.getAttribute("data-imagem");
+            popupTitulo.textContent = titulo;
+            popupDescricao.textContent = descricao;
+            popupImagem.src = imagem;
+            popupImagem.alt = titulo;
+            popupImagem.style.width = "100%"; 
             popup.style.display = "flex";
-            }
+        }
     });
 
-    // Fechar o pop-up ao clicar no botão de fechar
+    
     closePopupBtn.onclick = function() {
         popup.style.display = "none";
     }
 
-    // Fechar o pop-up ao clicar fora da janela do pop-up
+    
     window.onclick = function(event) {
         if (event.target === popup) {
             popup.style.display = "none";

@@ -223,7 +223,7 @@ footer {
 
 /* Estilo do conteúdo do Pop-up */
 .popup-content {
-    background-color: white;
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -233,7 +233,15 @@ footer {
     position: relative; /* Necessário para o botão de fechar */
     z-index: 1001; /* Garante que o conteúdo do pop-up fique acima do fundo */
 }
-
+.popup-content img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.popup-texto {
+    color:white;
+}
 /* Estilo do botão de fechar */
 .close {
     color: #aaa;
@@ -249,5 +257,79 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.banner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:10%;
+    background-color: black;
+    margin-top:60px;
+}
+
+.titulo-inicio {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Seção de Conteúdo */
+.widget-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+/* Blocos de Texto */
+.widget-text, .widget-text2 {
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px;
+    background: #1e1e1e;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito Hover */
+.widget-text:hover, .widget-text2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos */
+.widget-text h1, .widget-text2 h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Texto */
+.widget-text span, .widget-text2 span {
+    font-size: 18px;
+    line-height: 1.6;
+    display: block;
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .widget-div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titulo-inicio {
+        font-size: 36px;
+    }
 }
 
