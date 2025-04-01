@@ -1,0 +1,100 @@
+/* Reset básico para remover margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald";
+    
+}
+.img-banner {
+    width: 100%; /* A imagem vai ocupar toda a largura disponível */
+    height: 300px; /* Defina a altura para 200px */
+    object-fit: cover; /* Garante que a imagem não deforme, mantendo a proporção, e cobrindo toda a área */
+}
+
+.logo{
+    width:300px;
+    position: absolute; /* Logo com position absolute */
+    left: 20px; /* Ajusta a logo para a esquerda dentro do contêiner */
+    top: 50%; /* Alinha verticalmente ao centro */
+    transform: translateY(-50%); /* Ajusta para o centro vertical */
+}
+
+/* Estilo global */
+body {
+    background-color: #213555;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+    min-height: 100%; /* Garante que o conteúdo ocupe a altura inteira, mesmo se o conteúdo for pequeno */
+}
+
+/* ================= HEADER ================= */
+header {
+    
+    width: 100%;
+    background: white;
+    padding: 30px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between; /* Logo à esquerda, menu à direita */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 30px; /* Ajuste o padding conforme necessário */
+}
+
+/* Aumentando o padding no menu */
+nav {
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0; /* Aumenta a altura da barra de navegação */
+}
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    margin: 0; /* Remove a margem para garantir o alinhamento correto */
+    padding: 0; /* Remove o padding padrão */
+    
+}
+
+nav ul li {
+    margin: 0 20px;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2D336B;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    width: 100%;
+    padding: 0;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #2D336B;
+}
+/* =================  FOOTER  ================= */
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative; 
+    margin-top: auto; 
+}

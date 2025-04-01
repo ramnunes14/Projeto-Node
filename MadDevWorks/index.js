@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import homeRoutes from "./routes/homeRoutes.js";
 import portfolio from "./routes/portfolio.js";
 import contatoRoutes from "./routes/contatoRoutes.js";
+import preçárioRoutes from "./routes/preçárioRoutes.js";
 import errorRoutes from "./routes/404Routes.js"; 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -18,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", homeRoutes);
 app.use("/portfolio", portfolio);
 app.use("/contato", contatoRoutes);
-
+app.use("/preçário", preçárioRoutes);
 app.use(errorRoutes);
 
 app.listen(3000, (err) => {
